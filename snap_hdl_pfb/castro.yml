@@ -21,133 +21,133 @@ mm_slaves:
   span: 8192
 - !!python/object:castro.mm_slave
   base_address: 73728
-  high_address: 75776
-  mode: 3
-  name: pwr_snapshot_ss0_bram
-  span: 2048
-- !!python/object:castro.mm_slave
-  base_address: 75776
   high_address: 77824
   mode: 3
-  name: pwr_snapshot_ss1_bram
-  span: 2048
+  name: pwr_snapshot_ss0_bram
+  span: 4096
 - !!python/object:castro.mm_slave
   base_address: 77824
-  high_address: 77828
+  high_address: 81920
+  mode: 3
+  name: pwr_snapshot_ss1_bram
+  span: 4096
+- !!python/object:castro.mm_slave
+  base_address: 81920
+  high_address: 81924
   mode: 3
   name: lmx_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 77828
-  high_address: 78084
+  base_address: 81924
+  high_address: 82180
   mode: 3
   name: adc16_controller
   span: 256
 - !!python/object:castro.mm_slave
-  base_address: 78084
-  high_address: 82180
-  mode: 3
-  name: adc16_wb_ram0
-  span: 4096
-- !!python/object:castro.mm_slave
   base_address: 82180
   high_address: 86276
   mode: 3
-  name: adc16_wb_ram1
+  name: adc16_wb_ram0
   span: 4096
 - !!python/object:castro.mm_slave
   base_address: 86276
   high_address: 90372
   mode: 3
-  name: adc16_wb_ram2
+  name: adc16_wb_ram1
   span: 4096
 - !!python/object:castro.mm_slave
   base_address: 90372
-  high_address: 90376
+  high_address: 94468
+  mode: 3
+  name: adc16_wb_ram2
+  span: 4096
+- !!python/object:castro.mm_slave
+  base_address: 94468
+  high_address: 94472
   mode: 3
   name: adc_snap_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90376
-  high_address: 90380
+  base_address: 94472
+  high_address: 94476
   mode: 1
   name: adc_snap_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90380
-  high_address: 90384
+  base_address: 94476
+  high_address: 94480
   mode: 3
   name: adc_trig
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90384
-  high_address: 90388
+  base_address: 94480
+  high_address: 94484
   mode: 3
   name: led_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90388
-  high_address: 90392
+  base_address: 94484
+  high_address: 94488
   mode: 1
   name: pfb_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90392
-  high_address: 90396
+  base_address: 94488
+  high_address: 94492
   mode: 3
   name: pwr_snapshot_ss0_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90396
-  high_address: 90400
+  base_address: 94492
+  high_address: 94496
   mode: 1
   name: pwr_snapshot_ss0_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90400
-  high_address: 90404
+  base_address: 94496
+  high_address: 94500
   mode: 3
   name: pwr_snapshot_ss1_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90404
-  high_address: 90408
+  base_address: 94500
+  high_address: 94504
   mode: 1
   name: pwr_snapshot_ss1_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90408
-  high_address: 90412
+  base_address: 94504
+  high_address: 94508
   mode: 3
   name: shiftreg
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90412
-  high_address: 90416
+  base_address: 94508
+  high_address: 94512
   mode: 3
   name: sw_trig
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90416
-  high_address: 90420
+  base_address: 94512
+  high_address: 94516
   mode: 3
   name: sys_ctl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90420
-  high_address: 90424
+  base_address: 94516
+  high_address: 94520
   mode: 3
   name: adc16_use_synth
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 90424
-  high_address: 90456
+  base_address: 94520
+  high_address: 94552
   mode: 1
   name: sys
   span: 32
 - !!python/object:castro.mm_slave
-  base_address: 90456
-  high_address: 151896
+  base_address: 94552
+  high_address: 155992
   mode: 3
   name: ten_gbe
   span: 61440

@@ -60,53 +60,53 @@ module top (
   localparam LMX2581_CONTROLLER_INST_WBID0 = 3;
   localparam N_WB_SLAVES = 23;
   localparam SLAVE_ADDR = {
-    32'h00016158, // ten_gbe
-    32'h00016138, // sys
-    32'h00016134, // adc16_use_synth
-    32'h00016130, // sys_ctl
-    32'h0001612c, // sw_trig
-    32'h00016128, // shiftreg
-    32'h00016124, // pwr_snapshot_ss1_status
-    32'h00016120, // pwr_snapshot_ss1_ctrl
-    32'h0001611c, // pwr_snapshot_ss0_status
-    32'h00016118, // pwr_snapshot_ss0_ctrl
-    32'h00016114, // pfb_status
-    32'h00016110, // led_ctrl
-    32'h0001610c, // adc_trig
-    32'h00016108, // adc_snap_status
-    32'h00016104, // adc_snap_ctrl
-    32'h00015104, // adc16_wb_ram2
-    32'h00014104, // adc16_wb_ram1
-    32'h00013104, // adc16_wb_ram0
-    32'h00013004, // adc16_controller
-    32'h00013000, // lmx_ctrl
-    32'h00012800, // pwr_snapshot_ss1_bram
+    32'h00017158, // ten_gbe
+    32'h00017138, // sys
+    32'h00017134, // adc16_use_synth
+    32'h00017130, // sys_ctl
+    32'h0001712c, // sw_trig
+    32'h00017128, // shiftreg
+    32'h00017124, // pwr_snapshot_ss1_status
+    32'h00017120, // pwr_snapshot_ss1_ctrl
+    32'h0001711c, // pwr_snapshot_ss0_status
+    32'h00017118, // pwr_snapshot_ss0_ctrl
+    32'h00017114, // pfb_status
+    32'h00017110, // led_ctrl
+    32'h0001710c, // adc_trig
+    32'h00017108, // adc_snap_status
+    32'h00017104, // adc_snap_ctrl
+    32'h00016104, // adc16_wb_ram2
+    32'h00015104, // adc16_wb_ram1
+    32'h00014104, // adc16_wb_ram0
+    32'h00014004, // adc16_controller
+    32'h00014000, // lmx_ctrl
+    32'h00013000, // pwr_snapshot_ss1_bram
     32'h00012000, // pwr_snapshot_ss0_bram
     32'h00010000 // adc_snap_bram
     };
   localparam SLAVE_HIGH = {
-    32'h00025157, // ten_gbe
-    32'h00016157, // sys
-    32'h00016137, // adc16_use_synth
-    32'h00016133, // sys_ctl
-    32'h0001612f, // sw_trig
-    32'h0001612b, // shiftreg
-    32'h00016127, // pwr_snapshot_ss1_status
-    32'h00016123, // pwr_snapshot_ss1_ctrl
-    32'h0001611f, // pwr_snapshot_ss0_status
-    32'h0001611b, // pwr_snapshot_ss0_ctrl
-    32'h00016117, // pfb_status
-    32'h00016113, // led_ctrl
-    32'h0001610f, // adc_trig
-    32'h0001610b, // adc_snap_status
-    32'h00016107, // adc_snap_ctrl
-    32'h00016103, // adc16_wb_ram2
-    32'h00015103, // adc16_wb_ram1
-    32'h00014103, // adc16_wb_ram0
-    32'h00013103, // adc16_controller
-    32'h00013003, // lmx_ctrl
-    32'h00012fff, // pwr_snapshot_ss1_bram
-    32'h000127ff, // pwr_snapshot_ss0_bram
+    32'h00026157, // ten_gbe
+    32'h00017157, // sys
+    32'h00017137, // adc16_use_synth
+    32'h00017133, // sys_ctl
+    32'h0001712f, // sw_trig
+    32'h0001712b, // shiftreg
+    32'h00017127, // pwr_snapshot_ss1_status
+    32'h00017123, // pwr_snapshot_ss1_ctrl
+    32'h0001711f, // pwr_snapshot_ss0_status
+    32'h0001711b, // pwr_snapshot_ss0_ctrl
+    32'h00017117, // pfb_status
+    32'h00017113, // led_ctrl
+    32'h0001710f, // adc_trig
+    32'h0001710b, // adc_snap_status
+    32'h00017107, // adc_snap_ctrl
+    32'h00017103, // adc16_wb_ram2
+    32'h00016103, // adc16_wb_ram1
+    32'h00015103, // adc16_wb_ram0
+    32'h00014103, // adc16_controller
+    32'h00014003, // lmx_ctrl
+    32'h00013fff, // pwr_snapshot_ss1_bram
+    32'h00012fff, // pwr_snapshot_ss0_bram
     32'h00011fff // adc_snap_bram
     };
   localparam SNAP_ADC_ADC16_USE_SYNTH_WBID0 = 20;
@@ -145,12 +145,12 @@ module top (
   wire [63:0] snap_hdl_pfb_adc_snap_bram_data_out;
   wire snap_hdl_pfb_adc_snap_bram_we;
   // bram: pwr_snapshot/ss0/bram
-  wire [7:0] snap_hdl_pfb_pwr_snapshot_ss0_bram_addr;
+  wire [8:0] snap_hdl_pfb_pwr_snapshot_ss0_bram_addr;
   wire [63:0] snap_hdl_pfb_pwr_snapshot_ss0_bram_data_in;
   wire [63:0] snap_hdl_pfb_pwr_snapshot_ss0_bram_data_out;
   wire snap_hdl_pfb_pwr_snapshot_ss0_bram_we;
   // bram: pwr_snapshot/ss1/bram
-  wire [7:0] snap_hdl_pfb_pwr_snapshot_ss1_bram_addr;
+  wire [8:0] snap_hdl_pfb_pwr_snapshot_ss1_bram_addr;
   wire [63:0] snap_hdl_pfb_pwr_snapshot_ss1_bram_data_in;
   wire [63:0] snap_hdl_pfb_pwr_snapshot_ss1_bram_data_out;
   wire snap_hdl_pfb_pwr_snapshot_ss1_bram_we;
@@ -346,7 +346,7 @@ module top (
   wb_bram #(
     .LOG_USER_WIDTH(6),
     .N_REGISTERS(0),
-    .USER_ADDR_BITS(8)
+    .USER_ADDR_BITS(9)
   ) snap_hdl_pfb_pwr_snapshot_ss0_bram (
     .user_addr(snap_hdl_pfb_pwr_snapshot_ss0_bram_addr),
     .user_clk(user_clk),
@@ -370,7 +370,7 @@ module top (
   wb_bram #(
     .LOG_USER_WIDTH(6),
     .N_REGISTERS(0),
-    .USER_ADDR_BITS(8)
+    .USER_ADDR_BITS(9)
   ) snap_hdl_pfb_pwr_snapshot_ss1_bram (
     .user_addr(snap_hdl_pfb_pwr_snapshot_ss1_bram_addr),
     .user_clk(user_clk),
