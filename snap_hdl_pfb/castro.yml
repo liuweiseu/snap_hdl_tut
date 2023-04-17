@@ -15,148 +15,120 @@ ips:
 mm_slaves:
 - !!python/object:castro.mm_slave
   base_address: 65536
-  high_address: 73728
-  mode: 3
-  name: adc_snap_bram
-  span: 8192
-- !!python/object:castro.mm_slave
-  base_address: 73728
-  high_address: 77824
+  high_address: 69632
   mode: 3
   name: pwr_snapshot_ss0_bram
   span: 4096
 - !!python/object:castro.mm_slave
-  base_address: 77824
-  high_address: 81920
+  base_address: 69632
+  high_address: 73728
   mode: 3
   name: pwr_snapshot_ss1_bram
   span: 4096
 - !!python/object:castro.mm_slave
-  base_address: 81920
-  high_address: 81924
+  base_address: 73728
+  high_address: 73732
   mode: 3
   name: lmx_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 81924
-  high_address: 82180
+  base_address: 73732
+  high_address: 73988
   mode: 3
   name: adc16_controller
   span: 256
 - !!python/object:castro.mm_slave
-  base_address: 82180
-  high_address: 86276
+  base_address: 73988
+  high_address: 78084
   mode: 3
   name: adc16_wb_ram0
   span: 4096
 - !!python/object:castro.mm_slave
-  base_address: 86276
-  high_address: 90372
+  base_address: 78084
+  high_address: 82180
   mode: 3
   name: adc16_wb_ram1
   span: 4096
 - !!python/object:castro.mm_slave
-  base_address: 90372
-  high_address: 94468
+  base_address: 82180
+  high_address: 86276
   mode: 3
   name: adc16_wb_ram2
   span: 4096
 - !!python/object:castro.mm_slave
-  base_address: 94468
-  high_address: 94472
-  mode: 3
-  name: adc_snap_ctrl
-  span: 4
-- !!python/object:castro.mm_slave
-  base_address: 94472
-  high_address: 94476
-  mode: 1
-  name: adc_snap_status
-  span: 4
-- !!python/object:castro.mm_slave
-  base_address: 94476
-  high_address: 94480
-  mode: 3
-  name: adc_trig
-  span: 4
-- !!python/object:castro.mm_slave
-  base_address: 94480
-  high_address: 94484
+  base_address: 86276
+  high_address: 86280
   mode: 3
   name: led_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94484
-  high_address: 94488
+  base_address: 86280
+  high_address: 86284
   mode: 1
   name: pfb_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94488
-  high_address: 94492
+  base_address: 86284
+  high_address: 86288
   mode: 3
   name: pwr_snapshot_ss0_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94492
-  high_address: 94496
+  base_address: 86288
+  high_address: 86292
   mode: 1
   name: pwr_snapshot_ss0_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94496
-  high_address: 94500
+  base_address: 86292
+  high_address: 86296
   mode: 3
   name: pwr_snapshot_ss1_ctrl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94500
-  high_address: 94504
+  base_address: 86296
+  high_address: 86300
   mode: 1
   name: pwr_snapshot_ss1_status
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94504
-  high_address: 94508
+  base_address: 86300
+  high_address: 86304
   mode: 3
   name: shiftreg
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94508
-  high_address: 94512
+  base_address: 86304
+  high_address: 86308
   mode: 3
   name: sw_trig
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94512
-  high_address: 94516
+  base_address: 86308
+  high_address: 86312
   mode: 3
   name: sys_ctl
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94516
-  high_address: 94520
+  base_address: 86312
+  high_address: 86316
   mode: 3
   name: adc16_use_synth
   span: 4
 - !!python/object:castro.mm_slave
-  base_address: 94520
-  high_address: 94552
+  base_address: 86316
+  high_address: 86348
   mode: 1
   name: sys
   span: 32
 - !!python/object:castro.mm_slave
-  base_address: 94552
-  high_address: 155992
+  base_address: 86348
+  high_address: 147788
   mode: 3
   name: ten_gbe
   span: 61440
 src_files:
 - /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb/top.v
-- /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_bram
-- /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
-- /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
-- /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/gpio_simulink2ext
 - /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 - /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc

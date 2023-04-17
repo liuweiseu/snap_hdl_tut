@@ -55,10 +55,10 @@ set_property target_language VHDL [current_project]
 
 
 import_files -force /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb/top.v
-import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_bram
+import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/gpio_simulink2ext
 import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_ppc2simulink
 import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_register_simulink2ppc
-import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/gpio_simulink2ext
+import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_bram
 import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/adc16_interface
 import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/wb_adc16_controller
 import_files -force /data/Wei/casper_hdl/dspdevel_designs/mlib_devel/jasper_library/hdl_sources/kat_ten_gb_eth/tx_packet_fifo.xci

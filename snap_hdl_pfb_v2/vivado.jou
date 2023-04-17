@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun Apr 16 21:03:31 2023
+# Process ID: 3902549
+# Current directory: /data/Wei/casper_hdl/dspdevel_designs
+# Command line: vivado -jou /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb_v2/vivado.jou -log /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb_v2/vivado.log -mode batch -source /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb_v2/gogogo.tcl
+# Log file: /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb_v2/vivado.log
+# Journal file: /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb_v2/vivado.jou
+#-----------------------------------------------------------
+source /data/Wei/casper_hdl/snap_hdl_tut/snap_hdl_pfb_v2/gogogo.tcl

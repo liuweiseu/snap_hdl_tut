@@ -54,80 +54,68 @@ module top (
 
 
   // usermodule: snap_hdl_pfb_ip
-  localparam ADC16_WB_RAM0_WBID0 = 5;
-  localparam ADC16_WB_RAM1_WBID0 = 6;
-  localparam ADC16_WB_RAM2_WBID0 = 7;
-  localparam LMX2581_CONTROLLER_INST_WBID0 = 3;
-  localparam N_WB_SLAVES = 23;
+  localparam ADC16_WB_RAM0_WBID0 = 4;
+  localparam ADC16_WB_RAM1_WBID0 = 5;
+  localparam ADC16_WB_RAM2_WBID0 = 6;
+  localparam LMX2581_CONTROLLER_INST_WBID0 = 2;
+  localparam N_WB_SLAVES = 19;
   localparam SLAVE_ADDR = {
-    32'h00017158, // ten_gbe
-    32'h00017138, // sys
-    32'h00017134, // adc16_use_synth
-    32'h00017130, // sys_ctl
-    32'h0001712c, // sw_trig
-    32'h00017128, // shiftreg
-    32'h00017124, // pwr_snapshot_ss1_status
-    32'h00017120, // pwr_snapshot_ss1_ctrl
-    32'h0001711c, // pwr_snapshot_ss0_status
-    32'h00017118, // pwr_snapshot_ss0_ctrl
-    32'h00017114, // pfb_status
-    32'h00017110, // led_ctrl
-    32'h0001710c, // adc_trig
-    32'h00017108, // adc_snap_status
-    32'h00017104, // adc_snap_ctrl
-    32'h00016104, // adc16_wb_ram2
-    32'h00015104, // adc16_wb_ram1
-    32'h00014104, // adc16_wb_ram0
-    32'h00014004, // adc16_controller
-    32'h00014000, // lmx_ctrl
-    32'h00013000, // pwr_snapshot_ss1_bram
-    32'h00012000, // pwr_snapshot_ss0_bram
-    32'h00010000 // adc_snap_bram
+    32'h0001514c, // ten_gbe
+    32'h0001512c, // sys
+    32'h00015128, // adc16_use_synth
+    32'h00015124, // sys_ctl
+    32'h00015120, // sw_trig
+    32'h0001511c, // shiftreg
+    32'h00015118, // pwr_snapshot_ss1_status
+    32'h00015114, // pwr_snapshot_ss1_ctrl
+    32'h00015110, // pwr_snapshot_ss0_status
+    32'h0001510c, // pwr_snapshot_ss0_ctrl
+    32'h00015108, // pfb_status
+    32'h00015104, // led_ctrl
+    32'h00014104, // adc16_wb_ram2
+    32'h00013104, // adc16_wb_ram1
+    32'h00012104, // adc16_wb_ram0
+    32'h00012004, // adc16_controller
+    32'h00012000, // lmx_ctrl
+    32'h00011000, // pwr_snapshot_ss1_bram
+    32'h00010000 // pwr_snapshot_ss0_bram
     };
   localparam SLAVE_HIGH = {
-    32'h00026157, // ten_gbe
-    32'h00017157, // sys
-    32'h00017137, // adc16_use_synth
-    32'h00017133, // sys_ctl
-    32'h0001712f, // sw_trig
-    32'h0001712b, // shiftreg
-    32'h00017127, // pwr_snapshot_ss1_status
-    32'h00017123, // pwr_snapshot_ss1_ctrl
-    32'h0001711f, // pwr_snapshot_ss0_status
-    32'h0001711b, // pwr_snapshot_ss0_ctrl
-    32'h00017117, // pfb_status
-    32'h00017113, // led_ctrl
-    32'h0001710f, // adc_trig
-    32'h0001710b, // adc_snap_status
-    32'h00017107, // adc_snap_ctrl
-    32'h00017103, // adc16_wb_ram2
-    32'h00016103, // adc16_wb_ram1
-    32'h00015103, // adc16_wb_ram0
-    32'h00014103, // adc16_controller
-    32'h00014003, // lmx_ctrl
-    32'h00013fff, // pwr_snapshot_ss1_bram
-    32'h00012fff, // pwr_snapshot_ss0_bram
-    32'h00011fff // adc_snap_bram
+    32'h0002414b, // ten_gbe
+    32'h0001514b, // sys
+    32'h0001512b, // adc16_use_synth
+    32'h00015127, // sys_ctl
+    32'h00015123, // sw_trig
+    32'h0001511f, // shiftreg
+    32'h0001511b, // pwr_snapshot_ss1_status
+    32'h00015117, // pwr_snapshot_ss1_ctrl
+    32'h00015113, // pwr_snapshot_ss0_status
+    32'h0001510f, // pwr_snapshot_ss0_ctrl
+    32'h0001510b, // pfb_status
+    32'h00015107, // led_ctrl
+    32'h00015103, // adc16_wb_ram2
+    32'h00014103, // adc16_wb_ram1
+    32'h00013103, // adc16_wb_ram0
+    32'h00012103, // adc16_controller
+    32'h00012003, // lmx_ctrl
+    32'h00011fff, // pwr_snapshot_ss1_bram
+    32'h00010fff // pwr_snapshot_ss0_bram
     };
-  localparam SNAP_ADC_ADC16_USE_SYNTH_WBID0 = 20;
-  localparam SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0 = 0;
-  localparam SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0 = 8;
-  localparam SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0 = 9;
-  localparam SNAP_HDL_PFB_ADC_TRIG_WBID0 = 10;
-  localparam SNAP_HDL_PFB_LED_CTRL_WBID0 = 11;
-  localparam SNAP_HDL_PFB_PFB_STATUS_WBID0 = 12;
-  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS0_BRAM_WBID0 = 1;
-  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS0_CTRL_WBID0 = 13;
-  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS0_STATUS_WBID0 = 14;
-  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS1_BRAM_WBID0 = 2;
-  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS1_CTRL_WBID0 = 15;
-  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS1_STATUS_WBID0 = 16;
-  localparam SNAP_HDL_PFB_SHIFTREG_WBID0 = 17;
-  localparam SNAP_HDL_PFB_SW_TRIG_WBID0 = 18;
-  localparam SNAP_HDL_PFB_SYS_CTL_WBID0 = 19;
-  localparam SNAP_HDL_PFB_TEN_GBE_WBID0 = 22;
-  localparam SYS_BLOCK_INST_WBID0 = 21;
-  localparam WB_ADC16_CONTROLLER_WBID0 = 4;
+  localparam SNAP_ADC_ADC16_USE_SYNTH_WBID0 = 16;
+  localparam SNAP_HDL_PFB_LED_CTRL_WBID0 = 7;
+  localparam SNAP_HDL_PFB_PFB_STATUS_WBID0 = 8;
+  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS0_BRAM_WBID0 = 0;
+  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS0_CTRL_WBID0 = 9;
+  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS0_STATUS_WBID0 = 10;
+  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS1_BRAM_WBID0 = 1;
+  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS1_CTRL_WBID0 = 11;
+  localparam SNAP_HDL_PFB_PWR_SNAPSHOT_SS1_STATUS_WBID0 = 12;
+  localparam SNAP_HDL_PFB_SHIFTREG_WBID0 = 13;
+  localparam SNAP_HDL_PFB_SW_TRIG_WBID0 = 14;
+  localparam SNAP_HDL_PFB_SYS_CTL_WBID0 = 15;
+  localparam SNAP_HDL_PFB_TEN_GBE_WBID0 = 18;
+  localparam SYS_BLOCK_INST_WBID0 = 17;
+  localparam WB_ADC16_CONTROLLER_WBID0 = 3;
 
 /*
   _____ _                   _     
@@ -139,11 +127,6 @@ module top (
           __/ |                  
          |___/                   
 */
-  // bram: adc_snap/bram
-  wire [9:0] snap_hdl_pfb_adc_snap_bram_addr;
-  wire [63:0] snap_hdl_pfb_adc_snap_bram_data_in;
-  wire [63:0] snap_hdl_pfb_adc_snap_bram_data_out;
-  wire snap_hdl_pfb_adc_snap_bram_we;
   // bram: pwr_snapshot/ss0/bram
   wire [8:0] snap_hdl_pfb_pwr_snapshot_ss0_bram_addr;
   wire [63:0] snap_hdl_pfb_pwr_snapshot_ss0_bram_data_in;
@@ -217,12 +200,6 @@ module top (
   wire [7:0] snap_hdl_pfb_snap_adc_c2;
   wire [7:0] snap_hdl_pfb_snap_adc_c3;
   wire [7:0] snap_hdl_pfb_snap_adc_c4;
-  // sw_reg: adc_snap/ctrl
-  wire [31:0] snap_hdl_pfb_adc_snap_ctrl_user_data_out;
-  // sw_reg: adc_snap/status
-  wire [31:0] snap_hdl_pfb_adc_snap_status_user_data_in;
-  // sw_reg: adc_trig
-  wire [31:0] snap_hdl_pfb_adc_trig_user_data_out;
   // sw_reg: led_ctrl
   wire [31:0] snap_hdl_pfb_led_ctrl_user_data_out;
   // sw_reg: pfb_status
@@ -294,14 +271,14 @@ module top (
   // usermodule: snap_hdl_pfb_ip
   (* keep = "true" *) wire wb_clk_i;
   wire wbm_err_i;
-  wire [22:0] wbs_ack_i;
+  wire [18:0] wbs_ack_i;
   wire [31:0] wbs_adr_o;
-  wire [22:0] wbs_cyc_o;
-  wire [735:0] wbs_dat_i;
+  wire [18:0] wbs_cyc_o;
+  wire [607:0] wbs_dat_i;
   wire [31:0] wbs_dat_o;
-  wire [22:0] wbs_err_i;
+  wire [18:0] wbs_err_i;
   wire [3:0] wbs_sel_o;
-  wire [22:0] wbs_stb_o;
+  wire [18:0] wbs_stb_o;
   wire wbs_we_o;
   // xsg: SNAP
   (* keep = "true" *) wire sys_clk;
@@ -318,30 +295,6 @@ module top (
   _| |_| | | \__ \ || (_| | | | | (_|  __/\__ \ 
  |_____|_| |_|___/\__\__,_|_| |_|\___\___||___/
 */
-  // bram: adc_snap/bram
-  wb_bram #(
-    .LOG_USER_WIDTH(6),
-    .N_REGISTERS(0),
-    .USER_ADDR_BITS(10)
-  ) snap_hdl_pfb_adc_snap_bram (
-    .user_addr(snap_hdl_pfb_adc_snap_bram_addr),
-    .user_clk(user_clk),
-    .user_din(snap_hdl_pfb_adc_snap_bram_data_in),
-    .user_dout(snap_hdl_pfb_adc_snap_bram_data_out),
-    .user_we(snap_hdl_pfb_adc_snap_bram_we),
-    .wb_ack_o(wbs_ack_i[SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0+1)*32-1:(SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0)*32]),
-    .wb_err_o(wbs_err_i[SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[SNAP_HDL_PFB_ADC_SNAP_BRAM_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
   // bram: pwr_snapshot/ss0/bram
   wb_bram #(
     .LOG_USER_WIDTH(6),
@@ -464,13 +417,6 @@ module top (
 
   snap_hdl_pfb_ip  snap_hdl_pfb_ip_inst (
     .clk(user_clk),
-    .snap_hdl_pfb_adc_snap_bram_addr(snap_hdl_pfb_adc_snap_bram_addr),
-    .snap_hdl_pfb_adc_snap_bram_data_in(snap_hdl_pfb_adc_snap_bram_data_in),
-    .snap_hdl_pfb_adc_snap_bram_data_out(snap_hdl_pfb_adc_snap_bram_data_out),
-    .snap_hdl_pfb_adc_snap_bram_we(snap_hdl_pfb_adc_snap_bram_we),
-    .snap_hdl_pfb_adc_snap_ctrl_user_data_out(snap_hdl_pfb_adc_snap_ctrl_user_data_out),
-    .snap_hdl_pfb_adc_snap_status_user_data_in(snap_hdl_pfb_adc_snap_status_user_data_in),
-    .snap_hdl_pfb_adc_trig_user_data_out(snap_hdl_pfb_adc_trig_user_data_out),
     .snap_hdl_pfb_led_ctrl_user_data_out(snap_hdl_pfb_led_ctrl_user_data_out),
     .snap_hdl_pfb_led_gateway(snap_hdl_pfb_led_gateway),
     .snap_hdl_pfb_pfb_status_user_data_in(snap_hdl_pfb_pfb_status_user_data_in),
@@ -735,61 +681,6 @@ module top (
     .wb_rst_i(wb_rst_i),
     .wb_sel_i(wbs_sel_o),
     .wb_stb_i(wbs_stb_o[WB_ADC16_CONTROLLER_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
-  // sw_reg: adc_snap/ctrl
-  wb_register_ppc2simulink #(
-    .INIT_VAL(32'h0)
-  ) snap_hdl_pfb_adc_snap_ctrl (
-    .user_clk(user_clk),
-    .user_data_out(snap_hdl_pfb_adc_snap_ctrl_user_data_out),
-    .wb_ack_o(wbs_ack_i[SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0+1)*32-1:(SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0)*32]),
-    .wb_err_o(wbs_err_i[SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[SNAP_HDL_PFB_ADC_SNAP_CTRL_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
-  // sw_reg: adc_snap/status
-  wb_register_simulink2ppc  snap_hdl_pfb_adc_snap_status (
-    .user_clk(user_clk),
-    .user_data_in(snap_hdl_pfb_adc_snap_status_user_data_in),
-    .wb_ack_o(wbs_ack_i[SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0+1)*32-1:(SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0)*32]),
-    .wb_err_o(wbs_err_i[SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[SNAP_HDL_PFB_ADC_SNAP_STATUS_WBID0]),
-    .wb_we_i(wbs_we_o)
-  );
-
-  // sw_reg: adc_trig
-  wb_register_ppc2simulink #(
-    .INIT_VAL(32'h0)
-  ) snap_hdl_pfb_adc_trig (
-    .user_clk(user_clk),
-    .user_data_out(snap_hdl_pfb_adc_trig_user_data_out),
-    .wb_ack_o(wbs_ack_i[SNAP_HDL_PFB_ADC_TRIG_WBID0]),
-    .wb_adr_i(wbs_adr_o[(0+1)*32-1:(0)*32]),
-    .wb_clk_i(wb_clk_i),
-    .wb_cyc_i(wbs_cyc_o[SNAP_HDL_PFB_ADC_TRIG_WBID0]),
-    .wb_dat_i(wbs_dat_o),
-    .wb_dat_o(wbs_dat_i[(SNAP_HDL_PFB_ADC_TRIG_WBID0+1)*32-1:(SNAP_HDL_PFB_ADC_TRIG_WBID0)*32]),
-    .wb_err_o(wbs_err_i[SNAP_HDL_PFB_ADC_TRIG_WBID0]),
-    .wb_rst_i(wb_rst_i),
-    .wb_sel_i(wbs_sel_o),
-    .wb_stb_i(wbs_stb_o[SNAP_HDL_PFB_ADC_TRIG_WBID0]),
     .wb_we_i(wbs_we_o)
   );
 
