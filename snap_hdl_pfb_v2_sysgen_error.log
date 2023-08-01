@@ -1,0 +1,40 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2021.1                 /data/Tools/Xilinx/Vivado/2021.1
+Matlab 9.10.0.2015706 (R2021a) Update 7 /data/Tools/MATLAB/R2021a
+Vivado 2021.1                           /data/Tools/Xilinx/Vivado/2021.1
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
+     Block: 'snap_hdl_pfb_v2/ System Generator'
+Error 0002: ERROR: [USF-XSim-62] 'compile' step failed with error(s)....
+     Block: 'snap_hdl_pfb_v2/led/snap_hdl_pfb_v2_led_gateway'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'snap_hdl_pfb_v2/ System Generator'
+
+Details:
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
+check the Tcl console output or
+'/tmp/xlsimADRyTQ/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvhdl.log'
+file for more information.
+Please refer to '/tmp/xlsimADRyTQ/vivado.log' for more details.
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'snap_hdl_pfb_v2/led/snap_hdl_pfb_v2_led_gateway'
+
+Details:
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please
+check the Tcl console output or
+'/tmp/xlsimADRyTQ/hdl_netlist/xelab.sim/sim_1/behav/xsim/xvhdl.log'
+file for more information.
+Please refer to '/tmp/xlsimADRyTQ/vivado.log' for more details.
+
+--------------------------------------------------------------------------------
